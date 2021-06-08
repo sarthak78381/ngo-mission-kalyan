@@ -10,7 +10,7 @@
     <title>Mission Kalyan Foundation</title>
 </head>
 <body>
-  <header class="text-gray-600 body-font header-pos">
+  <header class="text-gray-600 body-font header-pos" id='header-container'>
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
       <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
         <a class="mr-5 hover:text-gray-900" href="#home">Home</a>
@@ -18,12 +18,13 @@
         <a class="mr-5 hover:text-gray-900" href="#about">About</a>
         <a class="mr-5 hover:text-gray-900" href='#contact'>Contact</a>
       </nav>
-      <a class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
+      <a class="flex order-first lg:order-none lg:w-2/5 title-font font-medium items-center lg:items-center lg:justify-center mb-4 md:mb-0">
         <div class="image-container">
           <img src="./img/logo.jpeg" alt="" class="logo-image">
         </div>
+        <span class="header-logoText">Mission Kalyan Foundation</span>
       </a>
-      <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+      <div class="lg:w-1/5 inline-flex lg:justify-end ml-5 lg:ml-0">
         <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none rounded text-base mt-4 md:mt-0 donate-button">Donate
           <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
             <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -48,8 +49,8 @@
     </div>
   </section>
   <hr>
-  <section id="about" class="text-gray-600 body-font">
-    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+  <section id="gallery" class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap gallery-width">
       <div class="flex w-full mb-20 flex-wrap">
         <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">Master Cleanse Reliac Heirloom</h1>
         <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
@@ -81,7 +82,7 @@
     </div>
   </section>
   <hr>
-  <section class="text-gray-600 body-font relative">
+  <section class="text-gray-600 body-font relative" id='contact'>
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col text-center w-full mb-12">
         <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact Us</h1>
@@ -144,4 +145,5 @@
     </div>
   </section>
 </body>
+<script src='./script.js'></script>
 </html>
