@@ -28,8 +28,8 @@ body{
 
 
 .image-container{
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
 }
 
 .logo-image{
@@ -42,9 +42,8 @@ body{
 .header-logoText {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bolder;
-    width: 30vw;
-    font-size: 24px;
-    padding-left: 10px;
+    font-size: clamp(.9rem,3.5vw, 1.2rem);
+    padding-left: 5px;     
 }
 
 .donate-button{
@@ -93,12 +92,17 @@ body{
 }
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1025px) {
     .landing-page-image{
         object-fit: contain;
     }
     .gallery-width{
         max-width: 100%;
+    }
+    .sm-text-center{
+        text-align: center;
+        margin: 0;
+        padding-bottom: 20px;
     }
 }
 
