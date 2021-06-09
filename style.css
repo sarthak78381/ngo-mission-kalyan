@@ -25,6 +25,8 @@ body{
     background: transparent;
 }
 
+
+
 .image-container{
     height: 50px;
     width: 50px;
@@ -63,7 +65,15 @@ body{
 }
 
 .gallery-width{
-    max-width: 70%;
+    max-width:  70%;
+}
+
+
+.gallery-width img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    max-height: 50vh;
 }
 
 @keyframes glow {
