@@ -1,0 +1,94 @@
+extends Layout/main.pug
+
+block styles
+  link(rel='stylesheet' href='/styles/gallery.css')
+  link(rel='stylesheet' href='/styles/form.css')
+  link(rel='stylesheet' href='/styles/main.css')
+  link(rel='stylesheet' href='/styles/animation.css')
+
+block body 
+  section#donate-transition
+    .donate-transition_container
+      p Donate Now
+  section#home.text-gray-600.body-font
+    .container.px-5.mx-auto.flex.flex-col(class='lg:py-24')
+      .mx-auto(class='lg:w-4/6')
+        .rounded-lg.h-64.overflow-hidden
+          img.object-cover.object-center.h-full.w-full.landing-page-image(alt='content' src='/img/photo4.jpeg')
+        .flex.flex-col.mt-10.text-center(class='sm:flex-row')
+          .text-center
+            p.leading-relaxed.text-lg.mb-4
+              | The second wave of Corona Virus has brought the world on its
+              | knees and has yet again created an international pandemic
+              | emergency situation. With the spread of the Corona Virus, many
+              | families are stuck inside their homes and hospital wards that
+              | too sick and quarantined. Mission Kalyan Foundation has taken a
+              | pledge to help the families struck by the pandemic by offering
+              | food and medical services in this time of distress. People from
+              | all across the country are coming forward to help and we are not
+              | far behind.
+  hr
+  section#gallery.text-gray-600.body-font
+    .container.px-5.py-24.mx-auto.flex.flex-wrap.gallery-width
+      .flex.flex-wrap.-m-1.w-full.h-full(class='md:-m-2')
+        .flex.flex-wrap(class='w-1/2')
+          .p-1.pos-relative(class='md:p-2 w-1/2')
+            .front.front1
+              img.w-full.object-cover.h-full.object-center.block.galleryImage__holder(alt='gallery' src='')
+            .back.back1
+              img.w-full.object-cover.h-full.object-center.block.galleryImage__holder(alt='gallery' src='')
+          .p-1.pos-relative(class='md:p-2 w-1/2')
+            .front.front2
+              img.w-full.object-cover.h-full.object-center.block.galleryImage__holder(alt='gallery' src='')
+            .back.back2
+              img.w-full.object-cover.h-full.object-center.block.galleryImage__holder(alt='gallery' src='')
+          .p-1.w-full.pos-relative(class='md:p-2')
+            .front.front3
+              img.w-full.object-cover.h-full.object-center.block.galleryImage__holder(alt='gallery' src='')
+            .back.back3
+              img.w-full.object-cover.h-full.object-center.block.galleryImage__holder(alt='gallery' src='')
+        .flex.flex-wrap(class='w-1/2')
+          .p-1.w-full.pos-relative(class='md:p-2')
+            .front.front4
+              img.w-full.object-cover.h-full.object-center.block.galleryImage__holder(alt='gallery' src='')
+            .back.back4
+              img.w-full.object-cover.h-full.object-center.block.galleryImage__holder(alt='gallery' src='')
+          .p-1.pos-relative(class='md:p-2 w-1/2')
+            .front.front5
+              img.w-full.object-cover.h-full.object-center.block.galleryImage__holder(alt='gallery' src='')
+            .back.back5
+              img.w-full.object-cover.h-full.object-center.block.galleryImage__holder(alt='gallery' src='')
+          .p-1.pos-relative(class='md:p-2 w-1/2')
+            .front.front6
+              img.w-full.object-cover.h-full.object-center.block.galleryImage__holder(alt='gallery' src='')
+            .back.back6
+              img.w-full.object-cover.h-full.object-center.block.galleryImage__holder(alt='gallery' src='')
+      a.p-3.m-5.w-full.text-center.cursor-pointer.text-blue-600.body-font(href='/Gallery') View More...
+  hr
+  section#contact.text-gray-600.body-font.relative
+    .container.px-5.py-24.mx-auto
+      .flex.flex-col.text-center.w-full.mb-12
+        h1.text-2xl.font-medium.title-font.mb-4.text-gray-900(class='sm:text-3xl')
+          | Contact Us
+        p.mx-auto.leading-relaxed.text-base(class='lg:w-2/3')
+          | Tell us your issues here
+      .mx-auto(class='lg:w-1/2 md:w-2/3')
+        .flex.flex-wrap.-m-2
+          .p-2(class='w-1/2')
+            .relative
+              label.leading-7.text-sm.text-gray-600(for='name') Name
+              input#name.w-full.bg-gray-100.bg-opacity-50.rounded.border.border-gray-300.text-base.outline-none.text-gray-700.py-1.px-3.leading-8.transition-colors.duration-200.ease-in-out(type='text' name='name' class='focus:border-green-500 focus:bg-white focus:ring-2 focus:ring-green-200')
+          .p-2(class='w-1/2')
+            .relative
+              label.leading-7.text-sm.text-gray-600(for='email') Email
+              input#email.w-full.bg-gray-100.bg-opacity-50.rounded.border.border-gray-300.text-base.outline-none.text-gray-700.py-1.px-3.leading-8.transition-colors.duration-200.ease-in-out(type='email' name='email' class='focus:border-green-500 focus:bg-white focus:ring-2 focus:ring-green-200')
+          .p-2.w-full
+            .relative
+              label.leading-7.text-sm.text-gray-600(for='message') Message
+              textarea#message.w-full.bg-gray-100.bg-opacity-50.rounded.border.border-gray-300.h-32.text-base.outline-none.text-gray-700.py-1.px-3.resize-none.leading-6.transition-colors.duration-200.ease-in-out(name='message' class='focus:border-green-500 focus:bg-white focus:ring-2 focus:ring-green-200')
+          .p-2.w-full
+            button.flex.mx-auto.text-white.bg-green-500.border-0.py-2.px-8.rounded.text-lg(class='focus:outline-none hover:bg-green-600' type='submit')
+              | Send
+
+block script 
+  script(src='/js/script.js') 

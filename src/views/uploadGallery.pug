@@ -1,0 +1,46 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(href='https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css' rel='stylesheet')
+    link(rel='stylesheet' href='/styles/gallery.css')
+    link(rel='icon' href='/img/logo.jpeg' type='image/icon type')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css')
+    title Mission Kalyan Foundation
+.relative.max-h-screen.flex.items-center.justify-center.bg-gray-50.py-12.px-4.bg-white-500.bg-no-repeat.bg-cover.relative.items-center(class='sm:px-6 lg:px-8 min-h-screen' )
+  .absolute.bg-black.opacity-30.inset-0.z-0
+  .w-full.p-10.bg-white.rounded-xl.z-10(class='sm:max-w-lg')
+    .text-center
+      h2.mt-5.text-3xl.font-bold.text-gray-900
+        | File Upload!
+      p.mt-2.text-sm.text-gray-400 Upload A New Gallery
+    form.mt-8.space-y-3(action='/admin/Gallery-Upload' method='POST' enctype='multipart/form-data')
+      .grid.grid-cols-1.space-y-2
+        label.text-sm.font-bold.text-gray-500.tracking-wide Gallery Name
+        input.text-base.p-2.border.border-gray-300.rounded-lg(class='focus:outline-none focus:border-indigo-500' type='text' , required name='name')
+      .grid.grid-cols-1.space-y-2
+        label.text-sm.font-bold.text-gray-500.tracking-wide Select Image
+        .flex.items-center.justify-center.w-full
+          #image__container.flex.flex-col.rounded-lg.border-4.border-dashed.w-full.h-60.group.text-center.hidden
+            #container.container
+            #addMore__images 
+              label#addMore__imagesLabel(for='uploading__images') Select More Images
+          label#uploadingImage__label.flex.flex-col.rounded-lg.border-4.border-dashed.w-full.h-60.p-10.group.text-center(for='uploading__images')
+            .h-full.w-full.text-center.flex.flex-col.items-center.justify-center.items-center
+              .flex.flex-auto.max-h-48.mx-auto.-mt-10(class='w-2/5')
+                img.has-mask.h-36.object-center(src='https://img.freepik.com/free-vector/image-upload-concept-landing-page_52683-27130.jpg?size=338&ext=jpg' alt='freepik image')
+              p.pointer-none.text-gray-500
+                span.text-sm Drag and drop
+                |  files here 
+                br
+                |  or 
+                a.text-blue-600(id='' class='hover:underline') select a file
+                |  from your computer
+        input.hidden(type='file' accept=".jpeg,.jpg,.png" id='uploading__images' name='files' multiple required)
+      p.text-sm.text-gray-300
+        span File type: jpeg, jpg types of images
+      div
+        button.my-5.w-full.flex.justify-center.bg-blue-500.text-gray-100.p-4.rounded-full.tracking-wide.font-semibold.shadow-lg.cursor-pointer.transition.ease-in.duration-300(type='submit' class='focus:outline-none focus:shadow-outline hover:bg-blue-600')
+          | Upload
+script(src='/js/gallery.js')

@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(href='https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css' rel='stylesheet')    
+        link(rel='stylesheet' href='/styles/gallery.css')
+        title Mission Kalyan Foundation
+    body 
+        body.bg-gray-200
+            a.flex.m-4.text-white.bg-green-500.border-0.py-1.px-4.rounded.text-lg.absolute(href='/Gallery') &#x276E back
+            section.mx-auto.max-w-2xl
+                h2.text-4xl.text-center.tracking-wide.font-extrabold.font-serif.leading-loose.mb-2 #{name}
+                .shadow-2xl.relative
+                    // large image on slides
+                    each image, i in imageUrl 
+                        .mySlides.hidden(style="display: block")
+                            img.image1.w-full.sliderImage-viewer(src=`${image}` style=`${i === 0 ? "block":"none"}`)
+                    // butttons
+                    a.absolute.left-0.inset-y-0.flex.items-center.-mt-32.px-4.text-white.cursor-pointer.text-3xl.font-extrabold(class='hover:text-gray-800' onclick='plusSlides(-1)') &#x276E;
+                    a.absolute.right-0.inset-y-0.flex.items-center.-mt-32.px-4.text-white.cursor-pointer.text-3xl.font-extrabold(class='hover:text-gray-800' onclick='plusSlides(1)') &#x276F;
+                    // smaller images under description
+                    .flex
+                        each image, i in imageUrl 
+                            div
+                                img.image1.description.h-24.opacity-50.cursor-pointer(class='hover:opacity-100' src=`${image}` onclick=`currentSlide(${i+1})`)
+    script(src='/js/imageSlider.js')

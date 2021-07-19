@@ -1,0 +1,31 @@
+doctype html
+
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='icon' href='./img/logo.jpeg' type='image/icon type')
+  link(href='https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css' rel='stylesheet')
+  link(href='https://fonts.googleapis.com/css?family=Roboto@100;700&display=swap' rel='stylesheet')
+  link(rel="stylesheet", href="/styles/main.css")
+  script(src='https://kit.fontawesome.com/a81368914c.js')
+  title Mission Kalyan Foundation
+section.text-gray-600.body-font.admin__page
+  .container.px-5.py-24.mx-auto
+    .text-center.mb-20
+      h1.text-2xl.font-medium.text-center.title-font.text-gray-900.mb-4(class='sm:text-3xl') #{name}
+    .flex.flex-wrap.-mx-2(class='lg:w-4/5 sm:mx-auto sm:mb-2')
+      .p-2.w-full(class='sm:w-1/2')
+        .bg-gray-100.rounded.flex.p-4.h-full.items-center.title
+          a(href="/admin/Upload-Gallery").title-font.font-medium Upload New Images
+      .p-2.w-full(class='sm:w-1/2')
+        .bg-gray-100.rounded.flex.p-4.h-full.items-center.title
+          a(href="/admin/Delete-Gallery").title-font.font-medium Delete an Image
+      .p-2.w-full(class='sm:w-1/2')
+        .bg-gray-100.rounded.flex.p-4.h-full.items-center.title
+          a(href = "/admin/Add-New-Admin").title-font.font-medium Add a new Admin
+      .p-2.w-full(class='sm:w-1/2')
+        .bg-gray-100.rounded.flex.p-4.h-full.items-center.title
+          a(href="/admin/Change-Password").title-font.font-medium Change Password
+      button#adminLogout__button.flex.mx-auto.mt-16.text-white.bg-green-500.border-0.py-2.px-8.rounded.text-lg(class='focus:outline-none hover:bg-green-600') Log Out
+script(src='/js/admin.js')

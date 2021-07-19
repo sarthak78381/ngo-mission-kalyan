@@ -1,0 +1,58 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(href='https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css' rel='stylesheet')
+  block styles
+  link(rel='icon' href='/img/logo.jpeg' type='image/icon type')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css')
+  title Mission Kalyan Foundation
+header#header-container.text-gray-600.body-font.header-pos
+  nav.flex.flex-wrap.items-center.justify-between.p-4
+    .flex.items-center.w-auto(class='lg:order-2 lg:w-1/5 lg:text-center')
+      .image-container
+        img.logo-image(src='/img/logo.jpeg' alt='')
+      a.text-xl.font-semibold.font-heading.header-logoText(href='#')
+        | Mission Kalyan Foundation
+    #hamburger.block(class='lg:hidden')
+      button.navbar-burger.flex.items-center.py-2.px-3.rounded.border
+        svg.fill-current.h-3.w-3(viewbox='0 0 20 20' xmlns='http://www.w3.org/2000/svg')
+          title
+            | Menu
+          path(d='M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z')
+    #hidden-block1.navbar-menu.hidden.w-full.sm-text-center(class='lg:order-1 lg:block lg:w-2/5')
+      a.block.mt-4(class='lg:inline-block lg:mt-0 lg:mr-10 hover:text-indigo-600' href='/#home' onclick='closeMenu()')
+        | Home
+      a.block.mt-4(class='lg:inline-block lg:mt-0 lg:mr-10 hover:text-indigo-600' href='/#gallery' onclick='closeMenu()')
+        | Gallery
+      a.block.mt-4(class='lg:inline-block lg:mt-0 hover:text-indigo-600' href='/#contact' onclick='closeMenu()')
+        | Contact
+    #hidden-block2.navbar-menu.hidden.w-full.sm-text-center(class='lg:order-3 lg:block lg:w-2/5 lg:text-right')
+      a.inline-flex.items-center.bg-green-500.border-0.py-1.px-3.rounded.text-base.mt-4.donate-button(class='focus:outline-none hover:bg-green-600 md:mt-0' href='/Join-Us')
+        | Join us
+        svg.w-4.h-4.ml-1(fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewbox='0 0 24 24')
+          path(d='M5 12h14M12 5l7 7-7 7')
+
+block body 
+
+footer.bg-white.w-full.py-8(class='dark:bg-gray-800')
+  .max-w-screen-xl.mx-auto.px-4
+    a.flex.title-font.font-medium.items-center.justify-center.text-gray-900
+      .image-container
+        img.logo-image(src='/img/logo.jpeg' alt='')
+      span.ml-3.text-xl Mission Kalyan Foundation
+    p.text-sm.text-gray-500.mt-4.flex.items-center.justify-center(class='sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0') &copy; DL/2021/0278429
+    .pt-8.flex.max-w-xs.mx-auto.items-center.justify-between
+      a.text-gray-400.transition-colors.duration-200(href='https://youtu.be/BQ4vL3V-Dpg' class='hover:text-gray-800 dark:hover:text-white' target='_blank')
+        i.fab.fa-youtube
+      a.text-gray-400.transition-colors.duration-200(href='https://twitter.com/missionkalyanDL/status/1401173239611609091?s=08' target='_blank' class='hover:text-gray-800 dark:hover:text-white')
+        i.fab.fa-twitter
+      a.text-gray-400.transition-colors.duration-200(href='https://www.instagram.com/p/CPvZzxNheC5/?utm_medium=copy_link' target='_blank' class='hover:text-gray-800 dark:hover:text-white')
+        i.fab.fa-instagram
+      a.text-gray-400.transition-colors.duration-200(href='https://www.facebook.com/111693524335917/posts/149158460589423/' target='_blank' class='hover:text-gray-800 dark:hover:text-white')
+        i.fab.fa-facebook-square
+    .admin-btnc-container
+      a(href='/admin/login') Admin
+
+block script

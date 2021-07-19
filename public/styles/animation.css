@@ -1,0 +1,60 @@
+@keyframes glow {
+    0%{
+        filter: brightness(100%);
+    }
+    50%{
+        filter: brightness(130%);
+    }
+    75%{
+        filter: brightness(110%);
+    }
+    100%{
+        filter: brightness(100%);
+    }
+}
+@keyframes sliding {
+    0%{
+        transform: translateX(0vw);
+    }
+    50%{
+        transform: translateX(-80vw);
+    }
+    100%{
+        transform: translateX(0vw);
+    }
+}
+
+@keyframes slide-imgLeft{
+    0%{
+        transform: perspective(600px) rotateY(180deg);
+    }
+    40%{
+        transform: perspective(600px) rotateY(180deg);
+    }
+    50%{
+        transform: perspective(600px) rotateY(0deg);
+    }
+    90%{
+        transform: perspective(600px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(600px) rotateY(180deg);
+    }
+}
+@keyframes slide-imgRight{
+    0%{
+        transform: perspective(600px) rotateY(360deg);
+    }
+    40%{
+        transform: perspective(600px) rotateY(360deg);
+    }
+    50%{
+        transform: perspective(600px) rotateY(180deg);
+    }
+    90%{
+        transform: perspective(600px) rotateY(180deg);
+    }
+    100%{
+        transform: perspective(600px) rotateY(360deg);
+    }
+}

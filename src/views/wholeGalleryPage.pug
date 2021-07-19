@@ -1,0 +1,24 @@
+extends Layout/main.pug
+
+block styles    
+    link(rel='stylesheet' href='/styles/gallery.css')
+    link(rel='stylesheet' href='/styles/main.css')
+    link(rel='stylesheet' href='/styles/animation.css')
+
+block body  
+    section.text-gray-600.body-font
+        .container.px-5.py-24.mx-auto
+            .flex.flex-wrap.-m-4
+                if GalleryEvent 
+                    each event in GalleryEvent
+                        .p-4.px-10.w-full.cursor-pointer(class='lg:w-1/4 md:w-1/2 hover:bg-gray-100')
+                            a.block.relative.h-48.rounded.overflow-hidden.galleryImage__overview(href=`/Gallery/${event.name}`)
+                                img.object-cover.object-center.w-full.h-full.block(alt='Event Name' src=`${event.Url}`)
+                            .mt-4
+                                h2.text-gray-900.title-font.text-lg.font-medium.py-2 #{event.name}
+                else 
+                    h2.text-gray-900.title-font.text-lg.font-medium.w-full.text-center No Events Recorded
+
+block script 
+    script(src='/js/gallery.js')    
+    script(src='/js/script.js')    

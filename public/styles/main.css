@@ -9,6 +9,7 @@ body{
     min-height: 100vh;
     height: 100%;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
 .header-pos{
@@ -16,14 +17,13 @@ body{
     top: 0;
     left: 0;
 }
+
 #header-container{
     transition: all 0.3s ease;
     z-index: 10;
     color: #000;
     background: transparent;
 }
-
-
 
 .image-container{
     height: 40px;
@@ -82,17 +82,6 @@ body{
     object-fit: cover;
 }
 
-.gallery-width{
-    max-width:  70%;
-}
-
-
-.gallery-width img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    max-height: 50vh;
-}
 
 .admin-btnc-container{
     text-align: center;
@@ -100,30 +89,10 @@ body{
     color: #9ca3af;
 }
 
-@keyframes glow {
-    0%{
-        filter: brightness(100%);
-    }
-    50%{
-        filter: brightness(130%);
-    }
-    75%{
-        filter: brightness(110%);
-    }
-    100%{
-        filter: brightness(100%);
-    }
-}
-@keyframes sliding {
-    0%{
-        transform: translateX(0vw);
-    }
-    50%{
-        transform: translateX(-80vw);
-    }
-    100%{
-        transform: translateX(0vw);
-    }
+/* admin page styling */
+
+.admin__page .title{
+    cursor: pointer;
 }
 
 
@@ -147,5 +116,12 @@ body{
     .donate-transition_container p{
         animation: sliding 10s infinite linear;
     }
-}
 
+    #gallery{
+        height: 50vh;
+    }
+
+    .gallery-width{
+        width: 90vw;
+    }
+}

@@ -1,0 +1,14 @@
+#login__form input:invalid {
+    border: 1px solid red;
+}
+
+/* Join Us form */
+
+
+@media only screen and (max-width: 1025px){
+    .smallScreen__margin{
+        width: 90%;
+        margin: auto;
+    }
+    
+}
